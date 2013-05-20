@@ -1,7 +1,7 @@
 cloudwatch_inject
 =====
 Author:      Bill Bates <wbates@wbates.com>
-------------------------------------------
+
 Description: Script to insert custom metrics from any server into AWS CloudWatch (and with modification, possibly
 other monitoring/tracking systems).  Uses JSON-based configuration files.
 
