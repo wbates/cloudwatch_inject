@@ -1,0 +1,14 @@
+# Boto configs
+
+[Credentials]
+aws_access_key_id = <your access key>
+aws_secret_access_key = <your secret key>
+
+[Boto]
+debug = 0
+num_retries = 10
+
+proxy = <your proxy host>
+proxy_port = <your proxy host's port>
+proxy_user = <your proxy user>
+proxy_pass = <your proxy password>

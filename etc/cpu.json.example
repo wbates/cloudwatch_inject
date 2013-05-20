@@ -1,0 +1,37 @@
+{
+  "Load_1_minute_avg":
+    { "description"      : "1 minute load average on localhost",
+      "metricName"       : "LoadAvg",
+      "nameSpace"        : "System/Linux",
+      "units"            : "None",
+      "dimensions"       :
+        { 
+          "LoadAverage"  : "1-Minute"
+        },
+      "command"          : "/usr/bin/uptime | /usr/bin/awk '{print $8}' | /usr/bin/cut -d, -f1"
+    },
+
+  "Load_5_minute_avg":
+    { "description"      : "5 minute load average on localhost",
+      "metricName"       : "LoadAvg",
+      "nameSpace"        : "System/Linux",
+      "units"            : "None",
+      "dimensions"       :
+        { 
+          "LoadAverage"  : "5-Minute"
+        },
+      "command"          : "/usr/bin/uptime | /usr/bin/awk '{print $9}' | /usr/bin/cut -d, -f1"
+    },
+
+  "Load_15_minute_avg":
+    { "description"      : "15 minute load average on localhost",
+      "metricName"       : "LoadAvg",
+      "nameSpace"        : "System/Linux",
+      "units"            : "None",
+      "dimensions"       :
+        { 
+          "LoadAverage"  : "15-Minute"
+        },
+      "command"          : "/usr/bin/uptime | /usr/bin/awk '{print $10}' | /usr/bin/cut -d, -f1"
+    }
+}

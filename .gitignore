@@ -1,0 +1,5 @@
+etc/*.ini
+etc/*.json
+*.pyc
+*.pyo
+*.swp

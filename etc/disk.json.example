@@ -1,0 +1,25 @@
+{
+  "FreeSpaceMBytes_root":
+    { "description"      : "Available free space on / in MB",
+      "metricName"       : "FreeSpaceMBytes",
+      "nameSpace"        : "System/Linux",
+      "units"            : "Megabytes",
+      "dimensions"       :
+        { 
+          "Path"         : "/"
+        },
+      "command"          : "/bin/df --local --block-size=1M / | /bin/grep / | /usr/bin/tr -s ' ' | /usr/bin/cut -d ' ' -f 4"
+    },
+
+  "UsedSpacePercent_root":
+    { "description"      : "Percentage of used disk space on /",
+      "metricName"       : "UsedSpacePercent",
+      "nameSpace"        : "System/Linux",
+      "units"            : "Percent",
+      "dimensions"       :
+        { 
+          "Path"         : "/"
+        },
+      "command"          : "/bin/df --local / | /bin/grep / | /usr/bin/tr -s ' ' | /usr/bin/cut -d ' ' -f 5 | /bin/grep -o \"[0-9]*\""
+    }
+}
